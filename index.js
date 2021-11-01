@@ -19,7 +19,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const db = getDatabase();
- set(ref(db, 'admin/' +"sadasdfasfs" ), {
+ set(ref(db, 'admin/' +"asasd" ), {
    username: " sadasd",
    email: "dsadasd",
    profile_picture : "asdasd"
