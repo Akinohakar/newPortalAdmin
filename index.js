@@ -19,10 +19,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const db = getDatabase();
- set(ref(db, 'admin/' +"asasd" ), {
-   username: " sadasd",
-   email: "dsadasd",
-   profile_picture : "asdasd"
+ set(ref(db, 'admin/' +"tona" ), {
+   username: " tonita",
+   email: "tonita",
+   profile_picture : "tona"
  });
 // writeUserData();
 
