@@ -18,9 +18,9 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
+  writeUserData();
 
-
-createUserWithEmailAndPassword(auth, "example@example.com", "tona1234")
+createUserWithEmailAndPassword(auth, "example@exampled.com", "tona1234")
   .then((userCredential) => {
     // Signed in
     const user = userCredential.user;
@@ -33,8 +33,7 @@ createUserWithEmailAndPassword(auth, "example@example.com", "tona1234")
   });
   function writeUserData() {
     const db = getDatabase();
-    set(ref(db, 'admin/'), {
+    set(ref(db, 'admin/'+'alan'), {
       username: "alaan"
     });
   }
-  writeUserData();
