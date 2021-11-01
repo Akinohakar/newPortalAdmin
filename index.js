@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js";
-import { getDatabase } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-database.js";
+import { getDatabase,ref, set } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-database.js";
 import { getAuth ,createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-auth.js";
 
 
@@ -18,6 +18,8 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
+
+
 createUserWithEmailAndPassword(auth, "example@example.com", "tona1234")
   .then((userCredential) => {
     // Signed in
@@ -29,3 +31,10 @@ createUserWithEmailAndPassword(auth, "example@example.com", "tona1234")
     const errorMessage = error.message;
     // ..
   });
+  function writeUserData() {
+    const db = getDatabase();
+    set(ref(db, 'admin/'), {
+      username: "alaan"
+    });
+  }
+  writeUserData();
