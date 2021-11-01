@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js";
-import { getDatabase,ref, set } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-database.js";
+import { getDatabase,ref, set ,onValue} from "https://www.gstatic.com/firebasejs/9.2.0/firebase-database.js";
 import { getAuth ,createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-auth.js";
 
 
@@ -18,6 +18,12 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
+const db = getDatabase();
+ set(ref(db, 'admin/' +"sadasdfasfs" ), {
+   username: " sadasd",
+   email: "dsadasd",
+   profile_picture : "asdasd"
+ });
 // writeUserData();
 
 // createUserWithEmailAndPassword(auth, "example@exampled.com", "tona1234")
